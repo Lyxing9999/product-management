@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'notification.dart'; // your existing showMessage
 
-/// Generic API response handler
+
 class ApiResponse<T> {
   final bool success;
   final String message;
@@ -24,7 +24,16 @@ class ApiResponse<T> {
     );
   }
 
-  /// Automatically show message in UI
+  /// New factory for error responses
+  factory ApiResponse.error(String message) {
+    return ApiResponse<T>(success: false, message: message, data: null);
+  }
+
+  /// New factory for success responses
+  factory ApiResponse.success(T data, {String message = ''}) {
+    return ApiResponse<T>(success: true, message: message, data: data);
+  }
+
   void showMessageInUI(BuildContext context, {bool onlyOnError = false}) {
     if (!onlyOnError || (onlyOnError && !success)) {
       showMessage(context, message, type: success ? MessageType.success : MessageType.error);
