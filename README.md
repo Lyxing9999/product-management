@@ -40,13 +40,11 @@ flutter pub get
 2. Update API base URL in `lib/services/product_service.dart`:
 ```dart
 // For mobile/emulator
-static const String baseUrl = 'http://10.0.2.2:3000/api';
+static const String baseUrl = 'http://10.0.2.2:3000/';
 
 // For web
-static const String baseUrl = 'http://localhost:3000/api';
-```
-
-3. Run app:
+static const String baseUrl = 'http://localhost:3000/';
+``3. Run app:
 ```bash
 flutter run
 ```
