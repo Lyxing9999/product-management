@@ -44,7 +44,9 @@ static const String baseUrl = 'http://10.0.2.2:3000/';
 
 // For web
 static const String baseUrl = 'http://localhost:3000/';
-``3. Run app:
+```
+
+3. Run app:
 ```bash
 flutter run
 ```
