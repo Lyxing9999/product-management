@@ -1,0 +1,55 @@
+# =========================
+# Miscellaneous
+# =========================
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.idea/
+*.iml
+
+# =========================
+# Node / Backend
+# =========================
+node_modules/
+package-lock.json
+.env
+.env.*  # ignore any other env variants
+
+# =========================
+# Flutter / Dart / MobileApp
+# =========================
+**/build/
+**/.dart_tool/
+**/.flutter-plugins-dependencies
+**/.packages
+pubspec.lock
+
+# Env files in mobile app
+**/mobileApp/.env
+**/mobileApp/assets/.env
+**/mobileApp/assets/.env.*  # any variant
+
+# iOS / macOS
+ios/Flutter/.last_build_id
+**/Pods/
+**/Runner.xcworkspace/
+**/DerivedData/
+**/Flutter/Flutter.framework
+**/Flutter/Flutter.podspec
+
+# Android
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+local.properties
+
+# Windows / Linux
+windows/Flutter/
+linux/flutter/
+
+# Web
+**/web/interop/
+**/web/.dart_tool/

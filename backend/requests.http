@@ -1,0 +1,67 @@
+### Get all products
+GET http://localhost:3000/products
+Accept: application/json
+
+###
+
+### Get product by ID
+GET http://localhost:3000/products/13
+Accept: application/json
+
+###
+
+### Create a new product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "PRODUCTNAME": "Test Product",
+  "PRICE": 22000,
+  "STOCK": 100
+}
+
+###
+
+### Update a product
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "PRODUCTNAME": "Updated Product",
+  "PRICE": 20.50,
+  "STOCK": 80
+}
+
+###
+
+### Delete a product
+DELETE http://localhost:3000/products/1
+Accept: application/json
+
+###
+
+### Search products
+GET http://localhost:3000/products/search?minPrice=10&maxPrice=16
+Accept: application/json
+
+###
+
+### Paginate products
+GET http://localhost:3000/products/search?name=ja&page=1&limit=10&sortBy=PRICE&sortDirection=ASC
+Accept: application/json
+
+###
+
+### Export products to CSV
+GET http://localhost:3000/products/export/csv
+Accept: text/csv
+
+###
+
+### Export products to PDF
+GET http://localhost:3000/products/export/pdf
+Accept: application/pdf
+Content-Disposition: attachment; filename=products.pdf
+Content-Type: application/pdf
+
+###
